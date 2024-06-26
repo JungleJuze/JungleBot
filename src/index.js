@@ -16,17 +16,35 @@ client.on('ready', (c) => {
     //username, tag, id
 });
 
-client.on('messageCreate', (message) => {
-//     console.log(message.content);
+// client.on('messageCreate', (message) => {
+// //     console.log(message.content);
 
-    //check if user is bot
-    if (message.author.bot){
-        return;
+//     //check if user is bot
+//     if (message.author.bot){
+//         return;
+//     }
+//     if (message.content === 'hello'){
+//             message.reply('hello');
+//     }
+// });
+
+client.on('interactionCreate', (interaction) => {
+    //runns only if interaction does not have a slash in it
+    if (!interaction.isChatInputCommand()) return;
+        // console.log(interaction.commandName);
+
+    if (interaction.commandName === 'hey') {
+        interaction.reply('hey');
     }
-    if (message.content === 'hello'){
-            message.reply('hello');
+
+    if (interaction.commandName === 'ping') {
+        interaction.reply('pong!');
     }
+
+
 });
+
+
 
 client.login(process.env.TOKEN);
 
