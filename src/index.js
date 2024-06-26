@@ -16,6 +16,7 @@ client.on('ready', (c) => {
     //username, tag, id
 });
 
+// for chat messages
 // client.on('messageCreate', (message) => {
 // //     console.log(message.content);
 
@@ -32,6 +33,13 @@ client.on('interactionCreate', (interaction) => {
     //runns only if interaction does not have a slash in it
     if (!interaction.isChatInputCommand()) return;
         // console.log(interaction.commandName);
+
+    if (interaction.commandName === 'add') {
+         const fnum = interaction.options.get('first-number').value;
+         const snum = interaction.options.get('second-number').value;
+
+         interaction.reply(`The sum is ${fnum + snum}`);
+        }
 
     if (interaction.commandName === 'hey') {
         interaction.reply('hey');
