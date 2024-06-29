@@ -8,7 +8,7 @@
 | Languages          | javascript, json                                 |
 | Last updated       | 2024-06-29                                       |
 
-## Global dependencies
+## Global/Dev dependencies
 | Name               | Resource                                         | 
 | :----------------- | :----------------------------------------------- |
 | nodejs             | [Link](https://nodejs.org/en)                    |
