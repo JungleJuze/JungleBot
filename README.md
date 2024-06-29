@@ -8,7 +8,9 @@
 | Languages          | javascript, json                                 |
 | Last updated       | 2024-06-29                                       |
 
-## Installations Required
-| Name               | Command                                          | 
+## Global dependencies
+| Name               | Resource                                         | 
 | :----------------- | :----------------------------------------------- |
+| nodejs             | [Link](https://nodejs.org/en)                    |
 | nodemon            | npm install -g nodemon                           |
+
